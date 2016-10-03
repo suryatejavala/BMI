@@ -1,0 +1,78 @@
+---
+title: "Find your BMI"
+author: "Surya Teja vala"
+date: "02-10-2016"
+output: pdf_document
+hitheme: tomorrow
+knit: slidify::knit2slides
+mode: selfcontained
+highlighter: highlight.js
+subtitle: null
+framework: io2012
+widgets: []
+---
+
+## Introduction
+========================================================
+
+This application is developed using R Programming 
+language in R Studio's IDE. The application
+used shiny environment under R studio for interface
+desigening.
+
+---
+
+=======================================================
+## Body Mass Index Calculator
+
+This is just a simple example of a Shiny app devised for the `Developing Data Products` course on Coursera.
+
+The BMI is used in a wide variety of contexts as a simple method to assess how much an individual's body weight departs from what is normal or desirable for a person of his or her height. There is however often vigorous debate, particularly regarding at which value of the BMI scale the threshold for overweight and obese should be set, but also about a range of perceived limitations and problems with the BMI. (Wikipedia)
+
+Main uses of application are as follows:
+
+TO find if a person is healthy, overweight or underweight.
+
+---
+
+
+## Instructions
+========================================================
+
+Please enter the height in cms and weight in kgs.
+
+---
+
+
+
+## Slide With Code
+========================================================
+```{r}
+
+METRIC   = 1;
+IMPERIAL = 2;
+
+bmi <- function(mass, height, units) {
+        bmi = mass / height^2
+        
+        if (units == IMPERIAL) {
+                bmi = bmi * 703
+        }
+        
+        return (bmi)
+}
+```
+======================================================
+
+---
+  
+## BMI Index Chart  
+
+"<img style='width: 40em; margin-top: 1em' src='https://upload.wikimedia.org/wikipedia/commons/e/e9/Body_mass_index_chart.svg' title='Body mass index chart (Wikipedia)' />"
+  
+
+
+
+
+
+
